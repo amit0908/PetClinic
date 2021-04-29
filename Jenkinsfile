@@ -13,7 +13,7 @@ pipeline {
       }
       post {
         always {
-          junit ' ** /taget/surefire-reports/TEST-*.xml'
+          junit '**/taget/surefire-reports/TEST-*.xml'
         }
       }
     }
