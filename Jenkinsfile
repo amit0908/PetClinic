@@ -1,14 +1,14 @@
-pipeline{
+pipeline {
   agent any
   stages {
-    stage ('Build'){
-      step {
+    stage('Build') {
+      steps {
         git 'https://github.com/amit0908/PetClinic.git'
         sh './mvnw clean compile'
       }
     }
-    stage ('Test'){
-      step {
+    stage('Test') {
+      steps {
         sh './mvnw test'
       }
       post {
